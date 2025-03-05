@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_2</title>
+    <style>
+        input[type="file"] {
+            display: none;
+        }
+        label {
+            display: block;
+            width: 100px;
+            text-align: center;
+            background: grey;
+            color: black;
+            padding: 5px;
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        label:hover {
+            background: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <form id="profileForm">
+        <table border="1" width="400">
+                <tr bgcolor="gray">
+                    <th colspan="2"><font size="5">Edit profile</font></th>
+                </tr>
+            <tr>
+                <td width="150" align="center">
+                    <img id="preview" src="pp/pp.jpg" alt="Profile Picture" width="100"><br>
+                    <label for="fileToUpload">Upload</label>
+                    <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
+                    <br>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td> <input type="text" id="name" required></td>
+                        </tr>
+                        <tr>
+                            <td>Position</td>
+                            <td>
+                                <select id="position" required>
+                                    <option value="">Select Position</option>
+                                    <optgroup label="Programmer">
+                                        <option>Senior Programmer</option>
+                                        <option>Junior Programmer</option>
+                                    </optgroup>
+                                    <optgroup label="System Analyst">
+                                        <option>Senior Analyst</option>
+                                        <option>Junior Analyst</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td> <input type="password" id="password" required></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password</td>
+                            <td> <input type="password" id="confirmPassword" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="right">
+                                <input type="reset" value="Reset">
+                                <input type="submit" value="Update">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

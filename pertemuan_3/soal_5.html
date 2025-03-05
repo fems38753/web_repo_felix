@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_5</title>
+    <style>
+        #detailsBox {
+            display: none;
+        }
+        
+        #details:target #summaryBox {
+            display: none;
+        }
+        
+        #details:target #detailsBox {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="details">
+        <div id="summaryBox" style="width: 250px; border: 1px solid black; padding: 10px;">
+            <h3>NEWS & EVENTS</h3>
+            <p><strong>12.02.2011</strong></p>
+            <p>Satu per satu para pesaing Manchester United mulai menunjukkan tanda-tanda "menyerah". Kini tinggal Ar..</p>
+            <a href="#details">more...</a>
+        </div>
+    
+        <div id="detailsBox" style="width: 250px; border: 1px solid black; padding: 10px;">
+            <h3>NEWS & EVENTS</h3>
+            <p>Satu per satu para pesaing Manchester United mulai menunjukkan tanda-tanda "menyerah". Kini tinggal Arsenal sebagai kompetitor terdekat yang masih percaya diri.</p>
+            <p>MU semakin mantap di puncak klasemen atas kemenangan 2-1 atas Manchester City, Sabtu (12/2/2011).</p>
+            <a href="#">back...</a>
+        </div>
+    </div>
+</body>
+</html>

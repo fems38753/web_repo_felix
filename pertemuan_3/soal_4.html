@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_4</title>
+</head>
+<body>
+    <div style="width: 400px; border: 1px solid black; padding: 15px;">
+        <h2>Form Tambah Data User</h2>
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td>: <input type="text" id="name"></td>
+                    <td><span id="nameError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td>: <input type="text" id="address"></td>
+                    <td><span id="addressError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>: <input type="email" id="email"></td>
+                    <td><span id="emailError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="homepage">Home Page</label></td>
+                    <td>: <input type="text" id="homepage"></td>
+                </tr>
+                <tr>
+                    <td><label for="birthday">Birthday</label></td>
+                    <td>: <input type="date" id="birthday"></td>
+                </tr>
+                <tr>
+                    <td><label for="favColor">Favorite Color</label></td>
+                    <td>: <input type="color" id="favColor"></td>
+                </tr>
+                <tr>
+                    <td><label for="ipk">IPK</label></td>
+                    <td>: <input type="number" id="ipk" min="0" max="4" step="0.1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number</label></td>
+                    <td>: <input type="text" id="phone" placeholder="123-4567890"></td>
+                    <td><span id="phoneError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top: 10px;">
+                        <button type="submit">Add</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
