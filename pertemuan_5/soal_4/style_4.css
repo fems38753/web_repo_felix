@@ -1,0 +1,45 @@
+/*FELIX MARCELINO - 2373012*/
+/*PEMROGRAMAN WEB*/
+
+body {
+    background: #3A0404 url('page_bg.jpg') repeat-x;
+}
+#nav {
+    width: 500px;
+    margin: 50px left;
+    padding: 10px;
+}
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#nav li {
+    float: left;
+    background: url(nav_left.gif) no-repeat;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 40px;
+
+}
+#nav span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
+#nav a {
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+#nav li:hover {
+    background-color: #AA0000;
+}
+#nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}

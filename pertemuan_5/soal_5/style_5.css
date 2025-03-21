@@ -1,0 +1,65 @@
+/*FELIX MARCELINO - 2373012*/
+/*PEMROGRAMAN WEB*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+}
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+.navbar {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+.navbar > li {
+    position: relative;
+    border-style: dotted;
+    border-color: grey;
+    border-width: 2px;
+    padding: 0px 20px 0px 20px;
+    margin-right: 3px; 
+    text-align: center;
+}
+.navbar a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.navbar a:hover {
+    background-color: black;
+    color: white;
+}
+.submenu {
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    text-align: center;
+    background-color: white;
+}
+.submenu li {
+    border-style: dotted;
+    border-color: grey;
+    border-width: 2px;
+    padding: 0px 0px 0px;
+    margin-top: 3px; 
+    width: 100%; 
+}
+.navbar li:hover .submenu {
+    display: block;
+}

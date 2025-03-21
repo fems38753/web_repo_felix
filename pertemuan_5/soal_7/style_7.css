@@ -1,0 +1,94 @@
+/*FELIX MARCELINO - 2373012*/
+/*PEMROGRAMAN WEB*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+.container {
+    width: 800px;
+    margin: auto;
+    background: white;
+}
+.header {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 120px;
+}
+.judul {
+    width: 340px;
+    height:80px;
+    background: yellow;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.lion-image {
+    width: 160px;
+}
+.main-content {
+    display: flex;
+    margin-top: 0px;
+}
+.sidebar {
+    width: 120px;
+    height: 600px;
+    background: url('bg_sea.png') no-repeat;
+    background-size: cover;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+.sidebar ul li {
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.content {
+    width: 510px;
+    padding: 10px;
+    padding-top: 0px;
+    color: #4169E1;
+    text-align: justify;
+    font-size: 14px;
+}
+.gajah-caption {
+    width: 190px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #4169E1;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+}
+.footer {
+    background: #4169E1;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    padding: 0px;
+    position: relative;
+    bottom: 20px;
+    left: 120px;
+    width: 520px;
+    height: 20px;
+}
+.image-gajah {
+    width: 200px;
+    height: 150px;
+    display: block;
+    height: auto;
+    float: right;
+    margin-left: 10px;
+}
+.h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+}
