@@ -1,0 +1,21 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+button {
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.myname {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1px;
+    font-size: 8px;
+    font-family:monospace;
+}

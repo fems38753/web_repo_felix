@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_3</title>
+    <link rel="stylesheet" href="style_3.css">
+</head>
+<body>
+    <div class="container">
+        <label for="tinggi">Tinggi Piramida:</label>
+        <input type="number" id="tinggi" min="1">
+        <button onclick="generatePyramid()">Proses</button>
+        <br><br>
+        <div id="pyramid"></div>
+    </div>
+    
+    <script>
+        function generatePyramid() {
+            let tinggi = parseInt(document.getElementById("tinggi").value);
+            if (isNaN(tinggi) || tinggi < 1) {
+                alert("Masukkan angka yang valid!");
+                return;
+            }
+            let pyramidDiv = document.getElementById("pyramid");
+            pyramidDiv.innerHTML = "";
+            let table = document.createElement("table");
+            
+            for (let i = 1; i <= tinggi; i++) {
+                let row = document.createElement("tr");
+                let totalCells = 2 * tinggi - 1;
+                let start = tinggi - i;
+                let end = tinggi + i - 2;
+                
+                for (let j = 0; j < totalCells; j++) {
+                    let cell = document.createElement("td");
+                    if (j >= start && j <= end) {
+                        cell.style.backgroundColor = "orange";
+                    } else {
+                        cell.style.backgroundColor = "transparent";
+                        cell.style.border = "none";
+                    }
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+            pyramidDiv.appendChild(table);
+        }
+    </script>
+</body>
+</html>
+<div class="myname">
+    <p>[2373012] - [Felix Marcelino]©</p>
+</div>

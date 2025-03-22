@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_2</title>
+    <link rel="stylesheet" href="style_2.css">
+</head>
+</head>
+<body>
+    <script>
+        let number;
+        do {
+            number = prompt("Masukkan angka untuk tabel perkalian:");
+            number = parseInt(number);
+        } while (isNaN(number));
+
+        let tableHtml = "<table>";
+        for (let i = 1; i <= 10; i++) {
+            tableHtml += `<tr>
+                            <td>${i}</td>
+                            <td>x</td>
+                            <td>${number}</td>
+                            <td>=</td>
+                            <td>${i * number}</td>
+                          </tr>`;
+        }
+        tableHtml += "</table>";
+        document.write(tableHtml);
+    </script>
+</body>
+</html>
+<div class="myname">
+    <p>[2373012] - [Felix Marcelino]©</p>
+</div>
