@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_3</title>
+    <link rel="stylesheet" href="style_3.css">
+    <script src="script_3.js"></script>
+    </head>
+    <body>
+      <div class="container">
+        <div class="line">
+          <label><b>Data</b></label>
+          <input type="text" id="dataInput">
+        </div>
+        <div class="line">
+          <button id="addButton" onclick="addData()">Add</button>
+          <select id="operation" onchange="handleOperation()">
+            <option value="">Pilih Operasi</option>
+            <option value="display">Display</option>
+            <option value="count">Count</option>
+            <option value="sum">Sum</option>
+            <option value="average">Average</option>
+            <option value="max">Max</option>
+            <option value="min">Min</option>
+            <option value="ganjil">Ganjil</option>
+            <option value="genap">Genap</option>
+            <option value="hapus">Hapus</option>
+          </select>
+        </div>
+        <div class="line">
+          <label><b>Hasil</b></label>
+          <input type="text" id="result" readonly>
+        </div>
+      </div>
+    </body>
+    </html>
+    <div class="myname">
+        <p>[2373012] - [Felix Marcelino]©</p>
+    </div>

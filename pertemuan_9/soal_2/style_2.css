@@ -1,0 +1,47 @@
+body {
+    font-family: Times New Roman, serif;
+  }
+  table {
+    width: 500px;
+    border-collapse: collapse;
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  th, td {
+    border: 1px solid #888;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #c1d1b2;
+  }
+  .row1 {
+    background-color: #a6c6ed;
+  }
+  .row2 {
+    background-color: #f9b591;
+  }
+  .row3 {
+    background-color: #a6c6ed;
+  }
+  .row4 {
+    background-color: #f9b591;
+  }
+  .row5 {
+    background-color: #a6c6ed;
+  }
+  .hovered {
+    background-color: #CCFFAA !important;
+  }
+  .myname {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1px;
+    font-size: 8px;
+    font-family:monospace;
+}
