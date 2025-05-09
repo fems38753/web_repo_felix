@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style_3.css">
+    
+</head>
+    <body>
+      <div id="container">
+        <button>Change colors</button>
+        <div class="clearfix">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+    
+      <script>
+        $(".box").click(function() {
+          $(".box").removeAttr("id");
+          $(".box").css("background-color", "");
+          $(this).css("background-color", "red");
+          $(this).attr("id", "stop");
+        });
+    
+        $("button").click(function () {
+          $(".box").each(function () {
+            if ($(this).attr("id") === "stop") {
+              return false;
+            }
+            $(this).css("background-color", "yellow");
+          });
+        });
+      </script>
+    </body>
+</html>
+<div class="myname">
+    <p>[2373012] - [Felix Marcelino]©</p>
+</div>

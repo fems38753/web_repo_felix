@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style_1.css">
+
+</head>
+  <script>
+    $(document).ready(function(){
+      $("li.item ol").hide();
+
+      $("li.item").hover(function(){
+        $("li.item ol").hide();
+        $(this).find("ol").show();
+      });
+    });
+  </script>
+</head>
+<body>
+  <ol class="menu">
+    <li class="item">jQuery
+      <ol>
+        <li>Download</li>
+        <li>Documentation</li>
+        <li>Blog</li>
+      </ol>
+    </li>
+    <li class="item">Community
+      <ol>
+        <li>Mailing List</li>
+        <li>Tutorials</li>
+        <li>Demos</li>
+        <li>Plugins</li>
+      </ol>
+    </li>
+    <li class="item">Development
+      <ol>
+        <li>Source Code</li>
+        <li>Bug Tracking</li>
+        <li>Recent Changes</li>
+      </ol>
+    </li>
+  </ol>
+</body>
+</html>
+<div class="myname">
+    <p>[2373012] - [Felix Marcelino]©</p>
+</div>

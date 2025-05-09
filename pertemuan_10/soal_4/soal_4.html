@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style_4.css">
+    
+</head>
+    <body>
+    <table border="1" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <input class="header" type="checkbox"/><br/>
+          <hr/>
+          <input class="body" type="checkbox"/><br/>
+          <input class="body" type="checkbox"/><br/>
+          <input class="body" type="checkbox"/><br/>
+          <input class="body" type="checkbox"/><br/>
+          <input class="body" type="checkbox"/><br/>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      $(".header").click(function() {
+        var flag = $(this).prop("checked");
+        if (flag) {
+          $("input:checkbox.body").prop("checked", true);
+        } else {
+          $("input:checkbox.body").prop("checked", false);
+        }
+      });
+    
+      $(".body").click(function() {
+        let total = $("input:checkbox.body").length;
+        let checked = $("input:checkbox.body:checked").length;
+        $(".header").prop("checked", total === checked);
+      });
+    </script>
+    
+    </body>
+</html>
+<div class="myname">
+    <p>[2373012] - [Felix Marcelino]©</p>
+</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style_2.css">
+  
+</head>
+  <body>
+  
+    <input type="text" id="inputName" placeholder="Masukkan nama">
+    <button id="addBtn">Add</button>
+    <button id="searchBtn">Search</button>
+  
+    <div id="namelist">
+      <div>John Resig</div>
+      <div>George Martin</div>
+      <div>Malcom John Sinclair</div>
+      <div>J. Ohn</div>
+    </div>
+  
+    <script>
+      $(document).ready(function(){
+        $('#addBtn').click(function(){
+          const name = $('#inputName').val().trim();
+          if(name !== ''){
+            $('<div>' + name + '</div>').appendTo('#namelist');
+            $('#inputName').val('');
+          }
+        });
+ 
+        $('#searchBtn').click(function(){
+          const keyword = $('#inputName').val().trim();
+          $('#namelist div').removeClass('highlight');
+  
+          if(keyword !== ''){
+            $('#namelist div:contains(' + keyword + ')').each(function(){
+              $(this).addClass('highlight');
+            });
+          }
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+<div class="myname">
+    <p>[2373012] - [Felix Marcelino]©</p>
+</div>

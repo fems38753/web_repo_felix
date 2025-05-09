@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal_5</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style_5.css">
+  
+</head>
+  <body>
+  
+  <input type="text" id="search" placeholder="Cari perusahaan..."><br><br>
+  
+  <div id="container">
+    <div>Sun Microsystem</div>
+    <div>Apache Software Foundation</div>
+    <div>Oracle Coorporation</div>
+    <div>International Bussiness Machines</div>
+    <div>Microsoft Coorporation</div>
+    <div>Apple Inc</div>
+    <div>Sap Ag</div>
+    <div>Accenture</div>
+    <div>Computer Sciences Coorporation</div>
+    <div>Google</div>
+    <div>Softbank</div>
+    <div>Yahoo</div>
+  </div>
+  
+  <script>
+    $("#search").on("input", function () {
+      var input = $(this).val().toLowerCase();
+  
+      $("#container div").each(function () {
+        var text = $(this).text();
+        if (text.toLowerCase().includes(input) && input !== "") {
+          $(this).addClass("highlight");
+        } else {
+          $(this).removeClass("highlight");
+        }
+      });
+    });
+  </script>
+  
+  </body>
+</html>
+<div class="myname">
+    <p>[2373012] - [Felix Marcelino]©</p>
+</div>
