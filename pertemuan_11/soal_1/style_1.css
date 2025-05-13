@@ -36,3 +36,13 @@ body {
         tr:nth-child(even) {
             background-color: #FFFFCC;
         }
+        .myname {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1px;
+            font-size: 8px;
+            font-family:monospace;
+        }
