@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal_2</title>
+<style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+            width: 700px;
+        }
+        .judul {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .title-input, .content-input, .generator-input {
+            display: block;
+            margin-bottom: 5px;
+            width: 99%;
+        }
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .footer {
+            border-top: 1px solid black;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">
+        <input class="title-input" type="text" placeholder="Title" id="title" />
+        <input class="content-input" type="text" placeholder="Content" id="content" />
+        <input class="generator-input" type="text" placeholder="Generator" id="generator" />
+    </div>
+    <br/>
+    <button onclick="tampilkan()">Look</button>
+    <br/><br/>
+    <div id="output" class="box"></div>
+</div>
+
+<script>
+    const data = {
+        "title": "Portal S1-Sistem Informasi",
+        "link": "http://si.itmaranatha.org",
+        "generator": "S1-SI FIT UKM",
+        "items": [
+            {
+                "title": "BIE02 - Pemrograman Web",
+                "link": "https://morning.maranatha.edu/course/view.php?id=4245",
+                "universitas": {"m":"http://www.itmaranatha.org/"},
+                "description": "Matakuliah ini akan mengenalkan dan mengajarkan mahasiswa tentang dasar-dasar dalam pemrograman web. Di sini mahasiswa akan mempelajari penulisan tag-tag HTML sebagai pembentuk dasar dari suatu halaman web, mahasiswa juga akan mempelajari CSS sebagai pelengkap fungsionalitas dari HTML.<br/>Selain itu mahasiswa juga akan mempelajari pemrograman web di sisi klien (client side scripting) dengan menggunakan Java Script. Dan sebagai pengenalan teknologi baru, mahasiswa juga akan mempelajari sekilas mengenai teknologi JQuery dan teknologi JSON.",
+                "published": "01-January-2023",
+                "author": "Dosen S1-SI",
+                "tags": "S1-Sistem Informasi, Pemrograman Web"
+            },
+            {
+                "title": "IS407 - Basis Data 2",
+                "link": "http://si.itmaranatha.org/index.php/is407-basis-data-2",
+                "universitas": {"m":"http://www.itmaranatha.org/"},
+                "description": "Mata kuliah ini mengajarkan kepada mahasiswa bahasa pemrograman SQL yang meliputi : Perintah SQL untuk mengambil data dari tabel dan mengurutkan data, fungsi-fungsi yang terdapat pada oracle seperti fungsi tanggal dll, Join table, Operasi DDL, DML, Constraint, Subquery, View, Index dan PL/SQL.",
+                "published": "01-January-2023",
+                "author": "Dosen S1-SI",
+                "tags": "S1-Sistem Informasi, Basis Data 2"
+            }
+        ]
+    };
+
+    function tampilkan() {
+        const output = document.getElementById("output");
+
+        document.getElementById("title").value = data.title;
+        document.getElementById("generator").value = data.generator;
+        document.getElementById("content").value = "";
+
+        let html = `<div class="judul"><a href="${data.link}">${data.title}</a></div><br/>`;
+
+        data.items.forEach(item => {
+            html += `<p><a href="${item.link}">${item.title}</a><br/>`;
+            html += `By : ${item.author} / <i>${item.published}</i></p>`;
+            html += `<p>${item.description}</p>`;
+            html += `<p>Universitas : <a href="${item.universitas.m}">Click Here</a><br/>`;
+            html += `Tag(s) : ${item.tags}</p>`;
+        });
+
+        html += `<div class="footer">©${data.generator}</div>`;
+
+        output.innerHTML = html;
+    }
+</script>
+
+</body>
+</html>

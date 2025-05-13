@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal_1</title>
+    <link rel="stylesheet" href="style_1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h3>Selamat! Berikut adalah Daftar Mahasiswa yang mendapat Nilai A Pemograman Web SI Tahun Ajaran 2023/2024</h3>
+
+    <div class="radio-box">
+        <form id="filterForm">
+            <input type="radio" name="kelas" value="all" checked> All<br>
+            <input type="radio" name="kelas" value="A"> Kelas A<br>
+            <input type="radio" name="kelas" value="B"> Kelas B<br><br>
+            <button type="button" onclick="loadData()">Search</button>
+        </form>
+    </div>
+
+    <table id="tabelMahasiswa">
+        <thead>
+            <tr>
+                <th>NRP</th>
+                <th>NAMA</th>
+                <th>KELAS</th>
+                <th>NILAI AKHIR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--DATA-->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function loadData() {
+        const pilihan = $(":radio[name='kelas']:checked").val();
+        let url = "";
+
+        if (pilihan === "A") {
+            url = "nilaiA.js";
+        } else if (pilihan === "B") {
+            url = "nilaiB.js";
+        } else {
+            url = "nilai.js";
+        }
+
+        $.getJSON(url, function(response) {
+            let rows = "";
+            $.each(response.nilai, function(index, item) {
+                rows += `<tr>
+                    <td>${item.nrp}</td>
+                    <td>${item.nama}</td>
+                    <td>${item.kelas}</td>
+                    <td>${item.nilaiakhir}</td>
+                </tr>`;
+            });
+            $("#tabelMahasiswa tbody").html(rows);
+        });
+    }
+</script>
+
+</body>
+</html>
