@@ -42,11 +42,11 @@
         let url = "";
 
         if (pilihan === "A") {
-            url = "nilaiA.js";
+            url = "nilaiA.json";
         } else if (pilihan === "B") {
-            url = "nilaiB.js";
+            url = "nilaiB.json";
         } else {
-            url = "nilai.js";
+            url = "nilai.json";
         }
 
         $.getJSON(url, function(response) {
